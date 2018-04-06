@@ -13,12 +13,12 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ config('app.name', 'Laravel') }} @yield('meta_title')</title>
+    <meta name="description" content="The largest professional job board for marketers, digital marketers, graphic designers, web developers, and more." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }} | Marketing Job Board</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

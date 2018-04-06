@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meta_title')
+    | Marketing Job Board
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-12">

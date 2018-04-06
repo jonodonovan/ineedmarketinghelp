@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meta_title')
+    | Purchase Job Ad
+@endsection
+
 @section('head_scripts')
     <script src="https://js.stripe.com/v3/"></script>
 @endsection

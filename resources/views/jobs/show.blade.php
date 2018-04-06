@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meta_title')
+    | {{$job->title}}
+@endsection
+
 @section('content')
     @include('partials.navsub')
     <div class="row">

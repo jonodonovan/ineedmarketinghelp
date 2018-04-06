@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meta_title')
+    | Create Job Ad
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-8">

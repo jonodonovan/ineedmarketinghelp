@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meta_title')
+    | {{$location->location_slug}}
+@endsection
+
 @section('content')
     @include('partials.navsub')
     <div class="row justify-content-center">
