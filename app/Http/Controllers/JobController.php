@@ -109,7 +109,7 @@ class JobController extends Controller
 
         // return redirect()->route('job.preview', [$job->record]);
         $job = Job::where('record', '=', $job->record)->firstOrFail();
-        return redirect()->route('jobs.thankyou')->withJob($job);
+        return redirect()->route('job.thankyou', [$job->record])->withJob($job);
     }
 
     /**
