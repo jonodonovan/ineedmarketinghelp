@@ -12,13 +12,13 @@
         <div class="col-md-4 ml-auto">
             <button type="button" class="btn btn-outline-secondary" style="margin-right:5px;"disabled>1. Create</button>
             <button type="button" class="btn btn-outline-success" style="margin-right:5px;"disabled>2. Preview</button>
-            <button type="button" class="btn btn-outline-secondary" style="margin-right:5px;"disabled>3. Purchase</button>
+            {{-- <button type="button" class="btn btn-outline-secondary" style="margin-right:5px;"disabled>3. Purchase</button> --}}
         </div>
     </div>
     <hr>
     <div class="row" style="margin-bottom:40px;">
         <div class="col-md-12">
-            <a class="btn btn-success btn-lg" href="{{route('job.purchase', Request::segment(4))}}" role="button">Looks great! Continue to Step 3</a>
+            <a class="btn btn-success btn-lg" href="{{route('job.purchase', Request::segment(4))}}" role="button">Looks great! Submit for review</a>
         </div>
     </div>
     <div class="row">
@@ -66,7 +66,7 @@
     </div>
     <div class="row" style="margin-bottom:40px;">
         <div class="col-md-12">
-            <a class="btn btn-success btn-lg" href="{{route('job.purchase', Request::segment(4))}}" role="button">Looks great! Continue to Step 3</a>
+            <a class="btn btn-success btn-lg" href="{{route('job.purchase', Request::segment(4))}}" role="button">Looks great! Submit for review</a>
         </div>
     </div>
 

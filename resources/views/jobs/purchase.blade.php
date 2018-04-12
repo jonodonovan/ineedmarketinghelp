@@ -53,7 +53,7 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <label for="card-element">
-                    Enter your billing information — SECURE
+                        Enter your billing information — SECURE
                     </label>
                     <div id="card-element">
                     <!-- A Stripe Element will be inserted here. -->

@@ -22,7 +22,7 @@
             <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center" style="font-family: 'Dancing Script', cursive;font-size: 30px;">
                 I Need Marketing Help!
             </a>
-            <a href="{{url('job/create')}}" class="btn btn-success btn-sm">Post a job for $149/month</a>
+            <a href="{{url('job/create')}}" class="btn btn-success btn-sm">Post a Free Job Ad</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

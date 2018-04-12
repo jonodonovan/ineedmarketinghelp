@@ -9,18 +9,18 @@
         <div class="col-md-8">
             <h2>STEP 1: CREATE YOUR JOB AD</h2>
         </div>
-        <div class="col-md-4 ml-auto">
+        {{-- <div class="col-md-4 ml-auto">
             <button type="button" class="btn btn-outline-success" style="margin-right:5px;"disabled>1. Create</button>
             <button type="button" class="btn btn-outline-secondary" style="margin-right:5px;"disabled>2. Preview</button>
             <button type="button" class="btn btn-outline-secondary" style="margin-right:5px;"disabled>3. Purchase</button>
-        </div>
+        </div> --}}
     </div>
     <hr>
     <div class="row justify-content-center" style="margin-top:20px;margin-bottom:40px;">
         <div class="col-md-8">
-            <div><span class="badge badge-success">New!</span> Listings are subscription-based and are active until you've filled the position. Every 30 days you will be charged $149 and your listing will be moved back to the top of its category.</div>
+            {{-- <div><span class="badge badge-success">New!</span> Listings are subscription-based and are active until you've filled the position. Every 30 days you will be charged $149 and your listing will be moved back to the top of its category.</div> --}}
             <br>
-            <div>Note that each listing can only be used to fill a single position.</div>
+            <div><span class="badge badge-info" style="padding:5px;">Note:</span> Each listing can only be used to fill a single position and each post will be reviewed for approval. We'll contact you if your post is not approved.</div>
         </div>
     </div>
     <form method="POST" action="{{route('job.store')}}">
@@ -164,7 +164,7 @@
                             <strong>{{ $errors->first('company_email') }}</strong>
                         </span>
                     @endif
-                    <p>This is where we’ll send your receipt and confirmation email.</p>
+                    <p>This is where we'll send a failed approval notice.</p>
                 </div>
                 <div class="form-group">
                     <label for="company_description">Company Description</label>
@@ -179,7 +179,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <button type="submit" class="btn btn-success btn-lg">Continue to Step 2 to preview your ad</button>
+            <button type="submit" class="btn btn-success btn-lg">Submit Job Ad</button>
         </div>
     </div>
     </form>
