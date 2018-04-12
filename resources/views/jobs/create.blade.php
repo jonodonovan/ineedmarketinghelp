@@ -20,7 +20,7 @@
         <div class="col-md-8">
             {{-- <div><span class="badge badge-success">New!</span> Listings are subscription-based and are active until you've filled the position. Every 30 days you will be charged $149 and your listing will be moved back to the top of its category.</div> --}}
             <br>
-            <div><span class="badge badge-info" style="padding:5px;">Note:</span> Each listing can only be used to fill a single position and each post will be reviewed for approval. We'll contact you if your post is not approved.</div>
+            <div><span class="badge badge-info" style="padding:5px;">Note:</span> Each listing can only be used to fill a single position and each post will be reviewed for approval. We'll contact you if your post is not approved. <b>Jobs are automatically removed after 4 months</b>.</div>
         </div>
     </div>
     <form method="POST" action="{{route('job.store')}}">
