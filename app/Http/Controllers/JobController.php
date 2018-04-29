@@ -59,12 +59,12 @@ class JobController extends Controller
             'job_type' => 'required',
             'job_desk' => 'required',
             'job_location' => 'required',
-            'job_description' => 'required',
+            'job_description' => 'required|min:100',
             'job_apply' => 'required',
             'company_name' => 'required',
             'company_url' => 'required',
             'company_email' => 'required',
-            'company_description' => 'required',
+            'company_description' => 'required|min:100',
         ));
 
         $company = new Company;

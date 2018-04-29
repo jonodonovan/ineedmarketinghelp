@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
-@section('meta_title')
-    | Marketing Job Board
+@section('meta_info')
+    <title>INeedMarketingHelp! Marketing Job Board</title>
+    <link rel="canonical" href="https://ineedmarketinghelp.com" />
+    <link rel="alternate" href="https://ineedmarketinghelp.com" hreflang="en-us" />
 @endsection
 
 @section('content')

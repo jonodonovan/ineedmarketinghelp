@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
-@section('meta_title')
-    | {{$location->location_slug}}
+@section('meta_info')
+    <title>{{$location->location}} Jobs | INeedMarketingHelp! Marketing Job Board</title>
+    <link rel="canonical" href="https://ineedmarketinghelp.com/location/{{$location->location_slug}}" />
+    <link rel="alternate" href="https://ineedmarketinghelp.com/location/{{$location->location_slug}}" hreflang="en-us" />
 @endsection
 
 @section('content')
     @include('partials.navsub')
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h1>{{$location->location_slug}}</h1>
+            <h1>{{$location->location}}</h1>
         </div>
     </div>
     <div class="row justify-content-center">

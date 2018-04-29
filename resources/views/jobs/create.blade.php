@@ -32,10 +32,10 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-8">
             <div class="form-group">
                 <label for="job_title">Job Title</label>
-                <input type="text" class="form-control{{ $errors->has('job_title') ? ' is-invalid' : '' }}" name="job_title" id="job_title" value="{{ old('job_title') }}">
+                <input type="text" class="form-control{{ $errors->has('job_title') ? ' is-invalid' : '' }}" name="job_title" id="job_title" value="{{ old('job_title') }}" placeholder="e.g. Marketing Coordinator, Graphic Artise, etc.">
                 @if ($errors->has('job_title'))
                     <span class="invalid-feedback">
                         <strong>{{ $errors->first('job_title') }}</strong>
@@ -43,6 +43,8 @@
                 @endif
             </div>
         </div>
+    </div>
+    <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="form-group">
                 <label for="job_category">Category</label>
@@ -59,8 +61,6 @@
                 @endif
             </div>
         </div>
-    </div>
-    <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="form-group">
                 <label for="job_type">Job Type</label>
@@ -73,6 +73,19 @@
                 @if ($errors->has('job_type'))
                     <span class="invalid-feedback">
                         <strong>{{ $errors->first('job_type') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="job_location">Job Location</label>
+                <input type="text" class="form-control{{ $errors->has('job_location') ? ' is-invalid' : '' }}" name="job_location" id="job_location" value="{{old('job_location')}}" placeholder="e.g. Tampa, Fl or US Only/Worldwide">
+                @if ($errors->has('job_location'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('job_location') }}</strong>
                     </span>
                 @endif
             </div>
@@ -97,21 +110,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="form-group">
-                <label for="job_location">Job Location</label>
-                <input type="text" class="form-control{{ $errors->has('job_location') ? ' is-invalid' : '' }}" name="job_location" id="job_location" value="{{old('job_location')}}">
-                @if ($errors->has('job_location'))
-                    <span class="invalid-feedback">
-                        <strong>{{ $errors->first('job_location') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="form-group">
-                <label for="job_description">Job Description</label>
-                <textarea name="job_description" name="job_description" id="job_description" rows="5" class="form-control{{$errors->has('job_description') ? ' is-invalid' : ''}}">{{old('job_description')}}</textarea>
+                <label for="job_description">Job Description <br><span class="badge badge-info" style=";">Note: Minimum of 100 characters</span></label>
+                <textarea name="job_description" name="job_description" id="job_description" rows="5" class="form-control{{$errors->has('job_description') ? ' is-invalid' : ''}}" placeholder="Tell us about the position.">{{old('job_description')}}</textarea>
                 @if ($errors->has('job_description'))
                     <span class="invalid-feedback">
                         <strong>{{$errors->first('job_description')}}</strong>
@@ -124,7 +124,7 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="job_apply">How do people apply for this job?</label>
-                <textarea name="job_apply" name="job_apply" id="job_apply" rows="3" class="form-control{{$errors->has('job_apply') ? ' is-invalid' : ''}}">{{old('job_apply')}}</textarea>
+                <textarea name="job_apply" name="job_apply" id="job_apply" rows="3" class="form-control{{$errors->has('job_apply') ? ' is-invalid' : ''}}" placeholder="How should people apply for this position?">{{old('job_apply')}}</textarea>
                 @if ($errors->has('job_apply'))
                     <span class="invalid-feedback">
                         <strong>{{$errors->first('job_apply')}}</strong>
@@ -140,7 +140,7 @@
             <h3>Tell us about your company</h3>
                 <div class="form-group">
                     <label for="company_name">Company Name</label>
-                    <input type="text" class="form-control{{ $errors->has('company_name') ? ' is-invalid' : '' }}" name="company_name" id="company_name" value="{{old('company_name')}}">
+                    <input type="text" class="form-control{{ $errors->has('company_name') ? ' is-invalid' : '' }}" name="company_name" id="company_name" value="{{old('company_name')}}" placeholder="Your company name">
                     @if ($errors->has('company_name'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('company_name') }}</strong>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="form-group">
                     <label for="company_url">Company URL</label>
-                    <input type="text" class="form-control{{ $errors->has('company_url') ? ' is-invalid' : '' }}" name="company_url" id="company_url" value="{{old('company_url')}}">
+                    <input type="text" class="form-control{{ $errors->has('company_url') ? ' is-invalid' : '' }}" name="company_url" id="company_url" value="{{old('company_url')}}" placeholder="Your company website">
                     @if ($errors->has('company_url'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('company_url') }}</strong>
@@ -158,7 +158,7 @@
                 </div>
                 <div class="form-group">
                     <label for="company_email">Company Email</label>
-                    <input type="text" class="form-control{{ $errors->has('company_email') ? ' is-invalid' : '' }}" name="company_email" id="company_email" value="{{old('company_email')}}">
+                    <input type="text" class="form-control{{ $errors->has('company_email') ? ' is-invalid' : '' }}" name="company_email" id="company_email" value="{{old('company_email')}}" placeholder="Recruiters email address">
                     @if ($errors->has('company_email'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('company_email') }}</strong>
@@ -167,8 +167,8 @@
                     <p>This is where we'll send a failed approval notice.</p>
                 </div>
                 <div class="form-group">
-                    <label for="company_description">Company Description</label>
-                    <textarea name="company_description" name="company_description" id="company_description" rows="5" class="form-control{{ $errors->has('company_description') ? ' is-invalid' : '' }}">{{old('company_description')}}</textarea>
+                    <label for="company_description">Company Description <br><span class="badge badge-info" style=";">Note: Minimum of 100 characters</span></label>
+                    <textarea name="company_description" name="company_description" id="company_description" rows="5" class="form-control{{ $errors->has('company_description') ? ' is-invalid' : '' }}" placeholder="Your time to shine, tell us about your company, why should people be excited to work for you?">{{old('company_description')}}</textarea>
                     @if ($errors->has('company_description'))
                         <span class="invalid-feedback">
                             <strong>{{$errors->first('company_description')}}</strong>
