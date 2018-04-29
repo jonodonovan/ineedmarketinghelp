@@ -17,19 +17,19 @@
     @include('partials.navsub')
     <div class="row">
         <div class="col-md-8">
-            {{$job->updated_at->format('M, d')}} | <a style="color:#546E7A" href="{{url('/category/'.$job->category->slug)}}">{{$job->category->name}}</a>
+            <i>Posted: {{$job->updated_at->format('M, d')}} | {{$job->type->name}} {{$job->category->name}}</i>
             <h1>{{$job->title}}</h1>
             <h4 style="color:#546E7A"></h4>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8">
-            Company: {{$job->company->name}}
+            Company: <a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8">
-            Job Location: <a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a>
+            Job Location: <a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a> - {{$job->desk->name}}
         </div>
     </div>
     <div class="row">
