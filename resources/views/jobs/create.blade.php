@@ -35,7 +35,7 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="job_title">Job Title</label>
-                <input type="text" class="form-control{{ $errors->has('job_title') ? ' is-invalid' : '' }}" name="job_title" id="job_title" value="{{ old('job_title') }}" placeholder="e.g. Marketing Coordinator, Graphic Artise, etc.">
+                <input type="text" class="form-control{{ $errors->has('job_title') ? ' is-invalid' : '' }}" name="job_title" id="job_title" value="{{ old('job_title') }}" placeholder="e.g. Marketing Coordinator, Graphic Artist, etc.">
                 @if ($errors->has('job_title'))
                     <span class="invalid-feedback">
                         <strong>{{ $errors->first('job_title') }}</strong>
