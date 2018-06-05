@@ -34,7 +34,7 @@
     </div>
     <div class="row">
         <div class="col-md-8">
-            <a href="{{$job->company->url}}">{{$job->company->url}}</a>
+            <a href="{{$job->company->url}}" target="_blank">{{$job->company->url}}</a>
         </div>
     </div>
     <br>
