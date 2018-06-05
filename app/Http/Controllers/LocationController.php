@@ -48,7 +48,7 @@ class LocationController extends Controller
     public function show($slug)
     {
         $location = Job::where('location_slug', '=', $slug)->firstOrFail();
-        $jobs = Job::where('location_slug', '=', $location->location_slug)->orderBy('updated_at', 'DESC')->get();
+        $jobs = Job::where('active', true)->where('location_slug', '=', $location->location_slug)->orderBy('updated_at', 'DESC')->get();
         return view('locations.show')->withLocation($location)->withJobs($jobs);
     }
 

@@ -48,7 +48,7 @@ class CompanyController extends Controller
     public function show($slug)
     {
         $company = Company::where('slug', '=', $slug)->firstOrFail();
-        $jobs = Job::where('company_id', '=', $company->id)->orderBy('updated_at', 'DESC')->get();
+        $jobs = Job::where('active', true)->where('company_id', '=', $company->id)->orderBy('updated_at', 'DESC')->get();
         return view('companies.show')->withCompany($company)->withJobs($jobs);
     }
 
