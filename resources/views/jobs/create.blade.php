@@ -124,7 +124,7 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="job_apply">How do people apply for this job?</label>
-                <textarea name="job_apply" name="job_apply" id="job_apply" rows="3" class="form-control{{$errors->has('job_apply') ? ' is-invalid' : ''}}" placeholder="How should people apply for this position?">{{old('job_apply')}}</textarea>
+                <textarea name="job_apply" name="job_apply" id="job_apply" rows="3" class="form-control{{$errors->has('job_apply') ? ' is-invalid' : ''}}" placeholder="Include link(s) and/or contact information for applicants.">{{old('job_apply')}}</textarea>
                 @if ($errors->has('job_apply'))
                     <span class="invalid-feedback">
                         <strong>{{$errors->first('job_apply')}}</strong>

@@ -120,7 +120,7 @@ class JobController extends Controller
      */
     public function show($slug)
     {
-        $job = Job::where('slug', '=', $slug)->firstOrFail();
+        $job = Job::where('active', true)->where('slug', '=', $slug)->firstOrFail();
         return view('jobs.show')->withJob($job);
     }
 

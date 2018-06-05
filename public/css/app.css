@@ -10010,3 +10010,26 @@ a {
   margin-bottom: 50px;
 }
 
+.navbar-brand a,
+a {
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.navbar-brand a:hover,
+a:hover {
+  color: #218838;
+}
+
+.navbar .cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
+  line-height: 1.1;
+}
+
+.navbar .noncursive {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
