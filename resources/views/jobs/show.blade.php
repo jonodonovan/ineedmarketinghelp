@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-md-8">
             <h3>Job Description:</h3>
-            {{$job->description}}
+            {!! nl2br(e($job->description)) !!}
         </div>
     </div>
     <br>
