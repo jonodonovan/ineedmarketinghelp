@@ -1,0 +1,47 @@
+@extends('layouts.app')
+
+@section('meta_info')
+    <title>News</title>
+    <link rel="canonical" href="https://ineedmarketinghelp.com" />
+    <link rel="alternate" href="https://ineedmarketinghelp.com" hreflang="en-us" />
+@endsection
+
+@section('og')
+
+@endsection
+
+@section('content')
+	<div class="row justify-content-center" style="margin-top:50px;background-color:#393E46;padding:50px 0;">
+		<div class="col-md-8 align-self-center" style="padding: 30px 0;">
+			<div class="row">
+				<div class="col-md-12">
+
+					@foreach($groups as $category=>$jobs)
+						<br>
+							@foreach($categories as $singlecategory)
+								@if($category == $singlecategory->id)
+									<a style="color:#ffffff;font-size:36px;font-weight:bold;" href="{{url('/category/'.$singlecategory->slug)}}">{{$singlecategory->name}}</a>
+								@endif
+							@endforeach
+
+							<ul class="list-group">
+							@foreach ($jobs as $job)
+								<li class="list-group-item" style="margin:1px 0;">
+									<a style="color:#546E7A" href="{{url('/type/'.$job->type->slug)}}">{{ucfirst($job->type->name)}}</a> |
+									<a style="color:#546E7A" href="{{url('/desk/'.$job->desk->slug)}}">{{ucfirst($job->desk->name)}}</a> |
+									<a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a>
+									<h2>
+										<a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
+										<a class="job-title" href="{{url('/job/'.$job->slug)}}">{{$job->title}}</a>
+										<span class="float-right" style="color:#546E7A">{{$job->updated_at->format('M, d')}}</span>
+									</h2>
+								</li>
+							@endforeach
+						</ul>
+					@endforeach
+
+				</div>
+			</div>
+		</div>
+	</div>
+@endsection

@@ -4,15 +4,17 @@
 .navbar-brand a, a {
     transition: color 0.15s ease-in-out;
 }
-.navbar-brand a:hover, a:hover{
-    color: #218838;
+.navbar-brand img {
+	width: 200px;
 }
-.navbar .cursive {
-    font-family: 'Dancing Script', cursive;
-    font-size: 35px;
-    line-height: 1.1;
+.navbar .nav-link {
+	text-transform: uppercase;
+	padding: 10px;
+	color: #393E46;
+	font-weight: bold;
 }
-.navbar .noncursive {
-    font-family: 'Roboto', sans-serif;
-    color:white; font-size: 30px;
+.navbar .nav-link:hover {
+	background-color: #393E46;
+	color: #ffffff;
+	border-radius: 5px;
 }

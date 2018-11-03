@@ -29,7 +29,11 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+		$jobs = Job::with('category')->where('active', true)->orderBy('updated_at', 'DESC')->get();
+		$groups = $jobs->groupBy('category_id');
+		$categories = Category::get();
+		// dd($groups);
+		return view('jobs/index')->withGroups($groups)->withCategories($categories);
     }
 
     /**
