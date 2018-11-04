@@ -5,11 +5,8 @@
 @endsection
 
 @section('content')
-	<div class="row justify-content-center" style="
-	margin-top: 50px;
-    background-color: #393E46;
-    padding: 50px 0;">
-		<div class="col-md-8 align-self-center" style="background-color:#fff;padding: 30px 0;">
+	<div class="row justify-content-center" style="background-color: #393E46;padding-bottom: 50px;">
+		<div class="col-md-8 align-self-center" style="margin-top: 20px;background-color:#fff;padding: 30px;">
 			<div class="row justify-content-center">
 		        <div class="col-md-8">
 		            <h2>STEP 1: CREATE YOUR JOB AD</h2>

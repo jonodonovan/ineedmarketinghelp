@@ -42,7 +42,7 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	@endif
-	
+
     @include('partials.nav')
     <div class="container-fluid" style="background-color:#393E46;padding-bottom:20px;">
         @yield('content')

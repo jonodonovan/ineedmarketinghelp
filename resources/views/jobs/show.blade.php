@@ -15,49 +15,54 @@
 
 @section('content')
     @include('partials.navsub')
-    <div class="row">
-        <div class="col-md-8">
-            <i>Posted: {{$job->updated_at->format('M d')}} | {{$job->type->name}} {{$job->category->name}}</i>
-            <h1>{{$job->title}}</h1>
-            <h4 style="color:#546E7A"></h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            Company: <a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            Job Location: <a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a> - {{$job->desk->name}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <a href="{{$job->company->url}}" target="_blank">{{$job->company->url}}</a>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-8">
-            <h3>About Us:</h3>
-            {{$job->company->description}}
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-8">
-            <h3>Job Description:</h3>
-            {!! nl2br(e($job->description)) !!}
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="alert alert-secondary" role="alert">
-                <h3>Apply for this position</h3>
-                {{$job->apply}}
-            </div>
-        </div>
-    </div>
+	<div class="row justify-content-center" style="background-color: #393E46;padding-bottom: 50px;">
+		<div class="col-md-8 align-self-center" style="background-color:#fff;padding: 30px;">
+		    <div class="row">
+		        <div class="col-md-8">
+		            <i>Posted: {{$job->updated_at->format('M d')}} | {{$job->type->name}} {{$job->category->name}}</i>
+		            <h1>{{$job->title}}</h1>
+		            <h4 style="color:#546E7A"></h4>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-md-8">
+		            Company: <a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-md-8">
+		            Job Location: <a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a> - {{$job->desk->name}}
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-md-8">
+		            <a href="{{$job->company->url}}" target="_blank">{{$job->company->url}}</a>
+		        </div>
+		    </div>
+		    <br>
+		    <div class="row">
+		        <div class="col-md-8">
+		            <h3>About Us:</h3>
+		            {{$job->company->description}}
+		        </div>
+		    </div>
+		    <br>
+		    <div class="row">
+		        <div class="col-md-8">
+		            <h3>Job Description:</h3>
+		            {!! nl2br(e($job->description)) !!}
+		        </div>
+		    </div>
+		    <br>
+		    <div class="row">
+		        <div class="col-md-8">
+		            <div class="alert alert-secondary" role="alert">
+		                <h3>Apply for this position</h3>
+		                {{$job->apply}}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	@include('partials.subscribe')
 @endsection
