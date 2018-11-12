@@ -1,10 +1,12 @@
 <?php
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/subscribe', 'WelcomeController@subscribe')->name('subscribe');
 Route::get('/guides', 'GuideController@index')->name('guides');
 Route::get('/news', 'NewsController@index')->name('news');
 Route::get('/case-studies', 'CasestudyController@index')->name('casestudies');
 Route::get('/jobs', 'JobController@index')->name('jobs');
+Route::get('/shop', 'ShopController@index')->name('shop');
 
 Route::get('/job/create/preview/{record}', 'JobController@preview')->name('job.preview');
 Route::get('/job/create/purchase/{record}', 'JobController@purchase')->name('job.purchase');

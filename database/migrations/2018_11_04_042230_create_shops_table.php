@@ -4,16 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGuidesTable extends Migration
+class CreateShopsTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('guides', function (Blueprint $table) {
+        Schema::create('shops', function (Blueprint $table) {
             $table->increments('id');
-			$table->string('slug');
-			$table->string('title');
-			$table->string('intro');
-			$table->text('body');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ class CreateGuidesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guides');
+        Schema::dropIfExists('shops');
     }
 }

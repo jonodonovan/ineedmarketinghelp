@@ -14,9 +14,9 @@
 @endsection
 
 @section('content')
-    @include('partials.navsub')
-	<div class="row justify-content-center" style="background-color: #393E46;padding-bottom: 50px;">
-		<div class="col-md-8 align-self-center" style="background-color:#fff;padding: 30px;">
+	<div class="row justify-content-center dark-bg" style="padding-top:20px;">
+		<div class="col-md-8 align-self-center white-bg">
+			@include('partials.navsub')
 		    <div class="row">
 		        <div class="col-md-8">
 		            <i>Posted: {{$job->updated_at->format('M d')}} | {{$job->type->name}} {{$job->category->name}}</i>
@@ -64,5 +64,4 @@
 		    </div>
 		</div>
 	</div>
-	@include('partials.subscribe')
 @endsection

@@ -43,9 +43,9 @@
 	<!-- End Google Tag Manager (noscript) -->
 	@endif
 
-    @include('partials.nav')
-    <div class="container-fluid" style="background-color:#393E46;padding-bottom:20px;">
-        @yield('content')
+    <div class="container-fluid">
+		@include('partials.nav')
+		@yield('content')
     </div>
 
     @yield('foot_scripts')

@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-	<div class="row justify-content-center" style="background-color:#393E46;padding-bottom: 50px;">
-		<div class="col-md-8 align-self-center" style="padding: 30px 0;">
+	<div class="row justify-content-center dark-bg">
+		<div class="col-md-8 align-self-center">
 			<div class="row">
 				<div class="col-md-12">
 
@@ -44,5 +44,4 @@
 			</div>
 		</div>
 	</div>
-	@include('partials.subscribe')
 @endsection

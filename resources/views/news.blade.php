@@ -11,15 +11,11 @@
 @endsection
 
 @section('content')
-	<div class="row justify-content-center" style="margin-top:50px;background-color:#393E46;padding:50px 0;">
-		<div class="col-md-8 align-self-center" style="padding: 30px 0;">
-		    <div class="row">
-		        <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
 
-					<p style="color:white;">News</p>
+			<p style="color:white;">News</p>
 
-		        </div>
-		    </div>
-		</div>
-	</div>
+        </div>
+    </div>
 @endsection

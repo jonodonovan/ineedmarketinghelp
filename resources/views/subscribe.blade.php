@@ -14,11 +14,14 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12">
-
-			<p style="color:white;">Hello world</p>
-
-        </div>
-    </div>
+	<div class="row justify-content-center">
+		<div class="col-md-8 align-self-center">
+			<div class="row">
+				<div class="col-md-12">
+					<p style="font-size:60px;font-weight:bold;text-align:center;color:white;">Sign up for our email newsletter</p>
+				</div>
+			</div>
+			@include('partials.subscribe')
+		</div>
+	</div>
 @endsection

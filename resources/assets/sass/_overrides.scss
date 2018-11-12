@@ -3,9 +3,12 @@ a {
 	padding: 10px;
 	font-weight: bold;
 }
-a:hover {
-
-}
 .jumbotron {
     background-color: #fff;
+}
+.container-fluid {
+	padding-bottom:20px;
+}
+.col-md-8.align-self-center {
+	padding:30px;
 }
