@@ -5,14 +5,13 @@ Route::get('/subscribe', 'WelcomeController@subscribe')->name('subscribe');
 Route::get('/guides', 'GuideController@index')->name('guides');
 Route::get('/news', 'NewsController@index')->name('news');
 Route::get('/case-studies', 'CasestudyController@index')->name('casestudies');
-Route::get('/jobs', 'JobController@index')->name('jobs');
 Route::get('/shop', 'ShopController@index')->name('shop');
 
-Route::get('/job/create/preview/{record}', 'JobController@preview')->name('job.preview');
-Route::get('/job/create/purchase/{record}', 'JobController@purchase')->name('job.purchase');
-Route::get('/job/create/thankyou/{record}', 'JobController@thankyou')->name('job.thankyou');
-Route::post('/job/purchased/{record}', 'JobController@purchased')->name('job.purchased');
-Route::resource('job', 'JobController');
+Route::get('/jobs/create/preview/{record}', 'JobController@preview')->name('jobs.preview');
+Route::get('/jobs/create/purchase/{record}', 'JobController@purchase')->name('jobs.purchase');
+Route::get('/jobs/create/thankyou/{record}', 'JobController@thankyou')->name('jobs.thankyou');
+Route::post('/jobs/purchased/{record}', 'JobController@purchased')->name('jobs.purchased');
+Route::resource('jobs', 'JobController');
 
 Route::get('/company/{slug}', 'CompanyController@show')->name('company.show');
 Route::get('/category/{category}', 'CategoryController@show')->name('category.show');

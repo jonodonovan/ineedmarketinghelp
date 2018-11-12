@@ -23,7 +23,7 @@
             <div><span class="badge badge-info" style="padding:5px;">Note:</span> Each listing can only be used to fill a single position and each post will be reviewed for approval. We'll contact you if your post is not approved. <b>Jobs are automatically removed after 4 months</b>.</div>
         </div>
     </div>
-    <form method="POST" action="{{route('job.store')}}">
+    <form method="POST" action="{{route('jobs.store')}}">
     @csrf
     <div class="row justify-content-center">
         <div class="col-md-8">

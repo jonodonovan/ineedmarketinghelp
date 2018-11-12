@@ -9,6 +9,6 @@ $factory->define(App\Company::class, function (Faker $faker) {
         'slug' => str_random(10),
         'url' => str_random(5).'.com',
         'email' => $faker->unique()->safeEmail,
-        'description' => str_random(30)
+        'description' => $faker->paragraph,
     ];
 });

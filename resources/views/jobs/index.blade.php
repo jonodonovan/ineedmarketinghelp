@@ -12,7 +12,8 @@
 
 @section('content')
 	<div class="row justify-content-center dark-bg">
-		<div class="col-md-8 align-self-center">
+		<div class="col-md-8">
+			@include('partials.navsub')
 			<div class="row">
 				<div class="col-md-12">
 
@@ -32,7 +33,7 @@
 									<a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a>
 									<h2>
 										<a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
-										<a class="job-title" href="{{url('/job/'.$job->slug)}}">{{$job->title}}</a>
+										<a class="job-title" href="{{url('/jobs/'.$job->slug)}}">{{$job->title}}</a>
 										<span class="float-right" style="color:#546E7A">{{$job->updated_at->format('M, d')}}</span>
 									</h2>
 								</li>

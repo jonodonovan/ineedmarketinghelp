@@ -4,7 +4,7 @@
     <a style="color:#546E7A" href="{{url('/location/'.$job->location_slug)}}">{{ucfirst($job->location)}}</a>
     <h2>
         <a style="color:#546E7A" href="{{url('/company/'.$job->company->slug)}}">{{$job->company->name}}</a>
-        <a href="{{url('/job/'.$job->slug)}}">{{$job->title}}</a>
+        <a href="{{url('/jobs/'.$job->slug)}}">{{$job->title}}</a>
         <span class="float-right" style="color:#546E7A">{{$job->updated_at->format('M, d')}}</span>
     </h2>
 </li>
