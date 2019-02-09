@@ -94,9 +94,9 @@ class JobController extends Controller
         $job->active = FALSE;
         $job->save();
 
-        // return redirect()->route('job.preview', [$job->record]);
+        // return redirect()->route('jobs.preview', [$job->record]);
         $job = Job::where('record', '=', $job->record)->firstOrFail();
-        return redirect()->route('job.thankyou', [$job->record])->withJob($job);
+        return redirect()->route('jobs.thankyou', [$job->record])->withJob($job);
     }
 
     public function show($slug)
@@ -129,7 +129,7 @@ class JobController extends Controller
         $job->update();
 
         Session::flash('status', 'Job Purchased');
-        return redirect()->route('job.thankyou', $job->record);
+        return redirect()->route('jobs.thankyou', $job->record);
     }
 
     public function thankyou($record)
